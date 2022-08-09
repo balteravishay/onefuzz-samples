@@ -7,4 +7,4 @@ all:
 
 clean:
 	cargo clean
-	(cd fuzz; cargo clean)
+	(cd .onefuzz; cargo clean)

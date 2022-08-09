@@ -17,6 +17,6 @@ cargo install cargo-fuzz --force
 cargo +nightly fuzz build --release  
 # Launch a fuzz job for each of the targets provided by cargo-fuzz
 for target in $(cargo fuzz list); do
-    onefuzz template libfuzzer basic $PROJECT_NAME $target $BUILD_NUMBER $POOL_NAME --target_exe ./fuzz/target/x86_64-unknown-linux-gnu/release/$target --inputs ./fuzz/corpus/$target
+    onefuzz template libfuzzer basic $PROJECT_NAME $target $BUILD_NUMBER $POOL_NAME --target_exe ./.onefuzz/target/x86_64-unknown-linux-gnu/release/$target --inputs ./.onefuzz/corpus/$target
 done
 ```
